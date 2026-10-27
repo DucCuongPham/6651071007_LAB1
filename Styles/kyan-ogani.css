@@ -1,2 +1,189 @@
-/* CSS tuy chinh cho KyanTechShop.
-   CSS giao dien goc Ogani nam trong style.css. */
+/* Hiệu ứng cho thẻ sản phẩm */
+.product-item {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* Hiệu ứng phóng ảnh sản phẩm */
+.product-item img {
+    transition: transform 0.4s ease;
+}
+
+.product-item:hover img {
+    transform: scale(1.05);
+}
+
+/* Hiệu ứng nút */
+.product-item button {
+    transition: background-color 0.3s ease,
+                transform 0.2s ease;
+}
+
+.product-item button:hover {
+    transform: translateY(-2px);
+}
+
+/* Hạn chế animation nếu người dùng yêu cầu */
+@media (prefers-reduced-motion: reduce) {
+    .product-item,
+    .product-item img,
+    .product-item button {
+        transition: none;
+    }
+
+    .product-item:hover,
+    .product-item:hover img,
+    .product-item button:hover {
+        transform: none;
+    }
+}
+
+
+/* ========================================
+   KYANTECHSHOP - ANIMATIONS
+   ======================================== */
+
+/* 1. ANIMATION CHO BANNER */
+.hero__item {
+    overflow: hidden;
+}
+
+.hero__text h2,
+.hero__text p,
+.hero__text .primary-btn {
+    animation: kyanBannerIn 0.7s ease both;
+}
+
+.hero__text p {
+    animation-delay: 0.15s;
+}
+
+.hero__text .primary-btn {
+    animation-delay: 0.3s;
+}
+
+@keyframes kyanBannerIn {
+    from {
+        opacity: 0;
+        transform: translateY(24px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 2. ANIMATION CHO SẢN PHẨM */
+.product__item {
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.product__item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.10);
+}
+
+.product__item__pic {
+    overflow: hidden;
+}
+
+.product__item__pic img {
+    transition: transform 0.45s ease;
+}
+
+.product__item:hover .product__item__pic img {
+    transform: scale(1.06);
+}
+
+/* Nút thao tác sản phẩm */
+.product__item__pic__hover {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.product__item__pic__hover li {
+    transition: transform 0.25s ease;
+}
+
+.product__item__pic__hover li:hover {
+    transform: translateY(-4px);
+}
+
+/* 3. ANIMATION CHO MENU DESKTOP */
+.header__menu ul li {
+    position: relative;
+}
+
+.header__menu ul li > a {
+    transition: color 0.25s ease;
+}
+
+.header__menu ul li:hover > a {
+    color: #7fad39;
+}
+
+/* Menu dropdown */
+.header__menu ul li ul {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition:
+        opacity 0.25s ease,
+        transform 0.25s ease,
+        visibility 0.25s ease;
+}
+
+.header__menu ul li:hover > ul {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* 4. HIỆU ỨNG XUẤT HIỆN KHI CUỘN */
+.kyan-reveal {
+    opacity: 0;
+    transform: translateY(22px);
+    transition:
+        opacity 0.6s ease,
+        transform 0.6s ease;
+}
+
+.kyan-reveal.kyan-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 5. HỖ TRỢ NGƯỜI DÙNG TẮT ANIMATION */
+@media (prefers-reduced-motion: reduce) {
+    .hero__text h2,
+    .hero__text p,
+    .hero__text .primary-btn {
+        animation: none;
+    }
+
+    .product__item,
+    .product__item__pic img,
+    .product__item__pic__hover,
+    .product__item__pic__hover li,
+    .header__menu ul li > a,
+    .header__menu ul li ul,
+    .kyan-reveal {
+        transition: none !important;
+    }
+
+    .product__item:hover,
+    .product__item:hover .product__item__pic img,
+    .product__item__pic__hover li:hover {
+        transform: none;
+    }
+
+    .kyan-reveal {
+        opacity: 1;
+        transform: none;
+    }
+}

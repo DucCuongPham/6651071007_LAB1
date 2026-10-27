@@ -758,3 +758,40 @@ button:hover,
         font-size: 12px;
     }
 }
+
+/* --- Sửa lỗi menu ngang Ogani --- */
+.header__menu {
+    padding: 24px 0;
+}
+
+.header__menu ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.header__menu ul li {
+    display: inline-block;
+    margin-right: 45px;
+    position: relative;
+}
+
+.header__menu ul li:last-child {
+    margin-right: 0;
+}
+
+.header__menu ul li a {
+    font-size: 15px;
+    color: #252525;
+    text-transform: uppercase;
+    font-weight: 700;
+    transition: all, 0.3s;
+    text-decoration: none;
+    display: block;
+    padding: 5px 0;
+}
+
+.header__menu ul li.active a,
+.header__menu ul li:hover a {
+    color: #7fad39; /* Màu xanh lá chủ đạo của Ogani */
+}
