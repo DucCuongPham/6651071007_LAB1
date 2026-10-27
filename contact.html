@@ -50,7 +50,7 @@
             text-align: center;
             border: 1px solid #e8e8e8;
             border-radius: 6px;
-            height: calc(100% - 25px); 
+            height: calc(100% - 25px);
             transition: 0.25s ease;
         }
 
@@ -148,23 +148,11 @@
             margin-top: 20px;
             text-align: center;
         }
-
-        @media (max-width: 576px) {
-            .contact-banner {
-                padding: 38px 0;
-                margin-bottom: 35px;
-            }
-            .contact-banner h1 {
-                font-size: 28px;
-            }
-            .contact-form-title h2 {
-                font-size: 25px;
-            }
-        }
     </style>
 </head>
 <body>
 
+    <!-- Header chuẩn Ogani -->
     <header class="header">
         <div class="header__top">
             <div class="container">
@@ -211,7 +199,7 @@
                     </nav>
                 </div>
                 <div class="col-lg-3 col-md-3">
-                    <div class="header__cart">
+                    <div class="header__cart text-right" style="text-align: right;">
                         <ul>
                             <li><a href="shoping-cart.html"><i class="fa fa-shopping-bag"></i> <span class="cart-count">0</span></a></li>
                         </ul>
@@ -313,50 +301,33 @@
         </section>
     </main>
 
-    <!-- Footer -->
-    <footer id="site-footer"></footer>
-
     <!-- Các tệp JavaScript -->
     <script src="Scripts/jquery-3.3.1.min.js"></script>
-    <script src="Scripts/jquery-ui.min.js"></script>
     <script src="Scripts/bootstrap.min.js"></script>
-    <script src="Scripts/jquery.nice-select.min.js"></script>
-    <script src="Scripts/jquery.slicknav.js"></script>
-    <script src="Scripts/owl.carousel.min.js"></script>
-    <script src="Scripts/mixitup.min.js"></script>
     <script src="Scripts/main.js"></script>
-    <script src="Scripts/products.js"></script>
-    <script src="Scripts/common.js"></script>
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-    const form = document.getElementById("contact-form");
-    const message = document.getElementById("contact-message");
+            const form = document.getElementById("contact-form");
+            const message = document.getElementById("contact-message");
 
-    if (!form || !message) return;
+            if (!form || !message) return;
 
-    form.addEventListener("submit", function (event) {
-        event.preventDefault();
-        
-        const name = document.getElementById("contact-name").value.trim();
-        const email = document.getElementById("contact-email").value.trim();
-        const subject = document.getElementById("contact-subject").value.trim();
-        const content = document.getElementById("contact-content").value.trim();
+            form.addEventListener("submit", function (event) {
+                event.preventDefault();
+                const name = document.getElementById("contact-name").value.trim();
 
-        if (!name || !email || !subject || !content) {
-            message.textContent = "Vui lòng điền đầy đủ tất cả các trường thông tin.";
-            message.style.color = "#d32f2f";
-            return;
-        }
+                if (!name) {
+                    message.textContent = "Vui lòng nhập họ và tên.";
+                    message.style.color = "#d32f2f";
+                    return;
+                }
 
-        // Giả lập gửi thành công
-        message.textContent = "Cảm ơn bạn đã liên hệ! Tin nhắn của bạn đã được gửi thành công.";
-        message.style.color = "#2e7d32";
-        
-        // Reset lại form sau khi gửi thành công
-        form.reset();
-    });
-});
+                message.textContent = "Cảm ơn bạn đã liên hệ! Tin nhắn đã được ghi nhận.";
+                message.style.color = "#1976d2";
+                form.reset();
+            });
+        });
     </script>
 </body>
 </html>
