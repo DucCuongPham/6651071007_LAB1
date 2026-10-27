@@ -1,0 +1,418 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Liên hệ Kyan Tech Shop để được hỗ trợ về điện thoại, laptop và phụ kiện công nghệ.">
+
+    <title>Liên hệ | Kyan Tech Shop</title>
+
+    <!-- CSS của Ogani -->
+    <link rel="stylesheet" href="Styles/bootstrap.min.css">
+    <link rel="stylesheet" href="Styles/font-awesome.min.css">
+    <link rel="stylesheet" href="Styles/elegant-icons.css">
+    <link rel="stylesheet" href="Styles/style.css">
+
+    <!-- CSS tùy chỉnh của KyanTechShop -->
+    <link rel="stylesheet" href="Styles/kyan-ogani.css">
+
+    <style>
+        /* Banner tiêu đề trang */
+        .contact-banner {
+            background: linear-gradient(120deg, #1976d2, #0d47a1);
+            padding: 55px 0;
+            color: #fff;
+            text-align: center;
+            margin-bottom: 55px;
+        }
+
+        .contact-banner h1 {
+            color: #fff;
+            font-size: 36px;
+            font-weight: 800;
+            margin-bottom: 12px;
+        }
+
+        .contact-banner a {
+            color: #fff;
+        }
+
+        .contact-banner span {
+            margin: 0 8px;
+            opacity: 0.8;
+        }
+
+        /* Các ô thông tin liên hệ */
+        .contact-info-section {
+            padding-bottom: 45px;
+        }
+
+        .contact-info-card {
+            padding: 28px 15px;
+            margin-bottom: 25px;
+            text-align: center;
+            border: 1px solid #e8e8e8;
+            border-radius: 6px;
+            height: calc(100% - 25px);
+            transition: 0.25s ease;
+        }
+
+        .contact-info-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+        }
+
+        .contact-info-icon {
+            width: 65px;
+            height: 65px;
+            margin: 0 auto 18px;
+            border-radius: 50%;
+            background: #eaf3ff;
+            color: #1976d2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 26px;
+        }
+
+        .contact-info-card h4 {
+            color: #1c1c1c;
+            font-weight: 700;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .contact-info-card p {
+            color: #666;
+            margin-bottom: 0;
+            overflow-wrap: anywhere;
+        }
+
+        /* Form liên hệ */
+        .contact-form-section {
+            padding: 30px 0 75px;
+        }
+
+        .contact-form-title {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .contact-form-title h2 {
+            font-size: 30px;
+            font-weight: 800;
+            color: #1c1c1c;
+            margin-bottom: 12px;
+        }
+
+        .contact-form-title p {
+            color: #777;
+        }
+
+        .kyan-contact-form input,
+        .kyan-contact-form textarea {
+            width: 100%;
+            padding: 13px 16px;
+            margin-bottom: 20px;
+            border: 1px solid #e1e1e1;
+            border-radius: 4px;
+            outline: none;
+            font-size: 14px;
+        }
+
+        .kyan-contact-form input:focus,
+        .kyan-contact-form textarea:focus {
+            border-color: #1976d2;
+        }
+
+        .kyan-contact-form textarea {
+            min-height: 160px;
+            resize: vertical;
+        }
+
+        .kyan-contact-form button {
+            display: block;
+            margin: 0 auto;
+            padding: 13px 32px;
+            background: #1976d2;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            cursor: pointer;
+        }
+
+        .kyan-contact-form button:hover {
+            background: #125ca1;
+        }
+
+        #contact-message {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        @media (max-width: 576px) {
+            .contact-banner {
+                padding: 38px 0;
+                margin-bottom: 35px;
+            }
+
+            .contact-banner h1 {
+                font-size: 28px;
+            }
+
+            .contact-form-title h2 {
+                font-size: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Thanh thông tin trên cùng -->
+    <div class="kyan-topline">
+        <div class="container">
+            <span>Miễn phí giao hàng cho đơn từ 5 triệu đồng</span>
+
+            <div>
+                <a href="contact.html">Liên hệ</a>
+                <a href="login.html">Đăng nhập</a>
+                <a href="register.html">Đăng ký</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container kyan-header-main">
+            <a class="kyan-logo" href="index.html">
+                Kyan<span>Tech</span><b>Shop</b>
+            </a>
+
+            <form id="search-form" class="kyan-search">
+                <input
+                    id="search-input"
+                    type="search"
+                    placeholder="Tìm điện thoại, laptop..."
+                    aria-label="Tìm sản phẩm"
+                >
+
+                <button type="submit">
+                    <i class="fa fa-search"></i>
+                    Tìm kiếm
+                </button>
+            </form>
+
+            <a class="kyan-cart" href="shoping-cart.html">
+                <i class="fa fa-shopping-bag"></i>
+                Giỏ hàng
+                <span class="cart-count">0</span>
+            </a>
+        </div>
+
+        <!-- Menu điều hướng -->
+        <div class="container">
+            <nav class="header__menu">
+                <ul>
+                    <li><a href="index.html">Trang chủ</a></li>
+                    <li><a href="shop.html">Cửa hàng</a></li>
+                    <li><a href="shop.html?category=phone">Điện thoại</a></li>
+                    <li><a href="shop.html?category=laptop">Laptop</a></li>
+                    <li><a href="shop.html?category=tablet">Máy tính bảng</a></li>
+                    <li><a href="shop.html?category=accessory">Phụ kiện</a></li>
+                    <li><a href="blog.html">Tin công nghệ</a></li>
+                    <li class="active"><a href="contact.html">Liên hệ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- Banner và breadcrumb -->
+        <section class="contact-banner">
+            <div class="container">
+                <h1>Liên hệ với chúng tôi</h1>
+
+                <div>
+                    <a href="index.html">Trang chủ</a>
+                    <span>/</span>
+                    <strong>Liên hệ</strong>
+                </div>
+            </div>
+        </section>
+
+        <!-- Thông tin liên hệ -->
+        <section class="contact-info-section">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="contact-info-card">
+                            <div class="contact-info-icon">
+                                <i class="fa fa-phone"></i>
+                            </div>
+
+                            <h4>Điện thoại</h4>
+                            <p>1900 0000</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="contact-info-card">
+                            <div class="contact-info-icon">
+                                <i class="fa fa-map-marker"></i>
+                            </div>
+
+                            <h4>Địa chỉ</h4>
+                            <p>TP. Hồ Chí Minh, Việt Nam</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="contact-info-card">
+                            <div class="contact-info-icon">
+                                <i class="fa fa-clock-o"></i>
+                            </div>
+
+                            <h4>Giờ làm việc</h4>
+                            <p>08:00 - 21:00, mỗi ngày</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="contact-info-card">
+                            <div class="contact-info-icon">
+                                <i class="fa fa-envelope"></i>
+                            </div>
+
+                            <h4>Email</h4>
+                            <p>kyantechshop@gmail.com</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Form gửi tin nhắn -->
+        <section class="contact-form-section">
+            <div class="container">
+
+                <div class="contact-form-title">
+                    <h2>Gửi tin nhắn cho chúng tôi</h2>
+                    <p>
+                        Bạn cần tư vấn sản phẩm hoặc hỗ trợ đơn hàng?
+                        Hãy để lại lời nhắn bên dưới.
+                    </p>
+                </div>
+
+                <div class="row justify-content-center">
+                    <div class="col-lg-9 col-md-11">
+
+                        <form id="contact-form" class="kyan-contact-form">
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <input
+                                        type="text"
+                                        id="contact-name"
+                                        name="name"
+                                        placeholder="Họ và tên của bạn"
+                                        required
+                                    >
+                                </div>
+
+                                <div class="col-md-6">
+                                    <input
+                                        type="email"
+                                        id="contact-email"
+                                        name="email"
+                                        placeholder="Địa chỉ email"
+                                        required
+                                    >
+                                </div>
+                            </div>
+
+                            <input
+                                type="text"
+                                id="contact-subject"
+                                name="subject"
+                                placeholder="Tiêu đề tin nhắn"
+                                required
+                            >
+
+                            <textarea
+                                id="contact-content"
+                                name="message"
+                                placeholder="Nội dung tin nhắn..."
+                                required
+                            ></textarea>
+
+                            <button type="submit">
+                                GỬI TIN NHẮN
+                            </button>
+
+                            <p
+                                id="contact-message"
+                                role="status"
+                                aria-live="polite"
+                            ></p>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer được tạo bởi common.js -->
+    <footer id="site-footer"></footer>
+
+    <!-- JavaScript -->
+    <script src="Scripts/jquery-3.3.1.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="Scripts/jquery.nice-select.min.js"></script>
+    <script src="Scripts/jquery.slicknav.js"></script>
+    <script src="Scripts/owl.carousel.min.js"></script>
+    <script src="Scripts/mixitup.min.js"></script>
+    <script src="Scripts/main.js"></script>
+
+    <script src="Scripts/products.js" defer></script>
+    <script src="Scripts/common.js" defer></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const form = document.getElementById("contact-form");
+            const message = document.getElementById("contact-message");
+
+            form.addEventListener("submit", function (event) {
+                event.preventDefault();
+
+                const name = document
+                    .getElementById("contact-name")
+                    .value.trim();
+
+                if (!name) {
+                    message.textContent = "Vui lòng nhập họ và tên.";
+                    message.style.color = "#d32f2f";
+                    return;
+                }
+
+                message.textContent =
+                    "Form đã được kiểm tra. Hiện tại website chưa kết nối hệ thống nhận tin nhắn.";
+                message.style.color = "#1976d2";
+
+                // Không xóa dữ liệu người dùng đã nhập.
+                // Khi có backend, gửi dữ liệu đến máy chủ tại đây.
+            });
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cửa hàng công nghệ | TechZone</title>
+
+    <!-- Kết nối CSS -->
+    <link rel="stylesheet" href="Styles/style.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container">
+            <div class="header">
+                <a href="index.html" class="logo">
+                    Kyan<span>Tech</span><span>Shop</span>
+                </a>
+
+                <form class="search-form" action="shop.html" method="get">
+                    <input
+                        type="search"
+                        name="q"
+                        placeholder="Tìm điện thoại, laptop..."
+                    >
+                    <button type="submit">Tìm kiếm</button>
+                </form>
+
+                <a href="shoping-cart.html">Giỏ hàng</a>
+            </div>
+        </div>
+
+        <nav class="navbar">
+            <div class="container nav-inner">
+                <a href="index.html">Trang chủ</a>
+                <a href="shop.html">Cửa hàng</a>
+                <a href="blog.html">Tin công nghệ</a>
+                <a href="contact.html">Liên hệ</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container shop-layout">
+        <aside class="shop-sidebar">
+            <h2>Danh mục</h2>
+
+            <label>
+                <input type="checkbox" name="category" value="phone">
+                Điện thoại
+            </label>
+
+            <label>
+                <input type="checkbox" name="category" value="laptop">
+                Laptop
+            </label>
+
+            <label>
+                <input type="checkbox" name="category" value="tablet">
+                Máy tính bảng
+            </label>
+
+            <label>
+                <input type="checkbox" name="category" value="accessory">
+                Phụ kiện
+            </label>
+
+            <h2>Khoảng giá</h2>
+
+            <label>
+                <input type="radio" name="price" value="under10">
+                Dưới 10 triệu
+            </label>
+
+            <label>
+                <input type="radio" name="price" value="10to20">
+                10–20 triệu
+            </label>
+
+            <label>
+                <input type="radio" name="price" value="over20">
+                Trên 20 triệu
+            </label>
+
+            <button id="clear-filters" type="button">
+                Xóa bộ lọc
+            </button>
+        </aside>
+
+        <section class="shop-main">
+            <h1>Cửa hàng công nghệ</h1>
+
+            <div class="shop-toolbar">
+                <span id="result-count"></span>
+
+                <select id="sort-products">
+                    <option value="default">Mặc định</option>
+                    <option value="price-asc">Giá tăng dần</option>
+                    <option value="price-desc">Giá giảm dần</option>
+                    <option value="name">Tên A–Z</option>
+                </select>
+            </div>
+
+            <div id="shop-products" class="product-grid"></div>
+            <div id="pagination"></div>
+        </section>
+    </main>
+
+    <footer id="site-footer">
+        <div class="container">
+            <h3>TechZone</h3>
+            <p>Điện thoại, laptop và phụ kiện công nghệ.</p>
+        </div>
+    </footer>
+
+    <script src="Scripts/products.js" defer></script>
+    <script src="Scripts/common.js" defer></script>
+    <script src="Scripts/shop.js" defer></script>
+</body>
+</html>

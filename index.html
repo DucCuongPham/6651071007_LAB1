@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Kyan Tech Shop - cửa hàng điện thoại, laptop, máy tính bảng và phụ kiện">
+    <meta name="keywords" content="Kyan Tech Shop, điện thoại, laptop, máy tính, phụ kiện">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kyan Tech Shop - Điện thoại và máy tính</title>
+    <link rel="stylesheet" href="Styles/style.css">
+    <script src="Scripts/products.js" defer></script>
+    <script src="Scripts/common.js" defer></script>
+    <script src="Scripts/home.js" defer></script>
+</head>
+<body>
+    <div class="topbar">
+        <div class="container topbar-inner">
+            <p>Miễn phí giao hàng cho đơn hàng từ 5 triệu đồng!</p>
+            <div class="topbar-links">
+                <a href="contact.html">Liên hệ</a>
+                <a href="login.html">Đăng nhập</a>
+            </div>
+        </div>
+    </div>
+
+    <header class="header container">
+        <a class="logo" href="index.html">Kyan<span>Tech</span><span>Shop</span></a>
+        <form id="search-form" class="search-form">
+            <input id="search-input" type="search" placeholder="Tìm điện thoại, laptop bạn cần..." aria-label="Tìm sản phẩm">
+            <button type="submit">Tìm kiếm</button>
+        </form>
+        <a href="shoping-cart.html" class="cart-link">Giỏ hàng (<span class="cart-count">0</span>)</a>
+    </header>
+
+    <nav class="navbar">
+        <div class="container nav-inner">
+            <a class="active" href="index.html">Trang chủ</a>
+            <a href="shop.html">Cửa hàng</a>
+            <a href="shop.html?category=phone">Điện thoại</a>
+            <a href="shop.html?category=laptop">Laptop</a>
+            <a href="shop.html?category=tablet">Máy tính bảng</a>
+            <a href="shop.html?category=accessory">Phụ kiện</a>
+            <a href="blog.html">Tin công nghệ</a>
+            <a href="contact.html">Liên hệ</a>
+        </div>
+    </nav>
+
+    <main class="container home-main">
+        <section class="home-showcase">
+            <aside class="home-categories">
+                <h2><span aria-hidden="true">☰</span> Danh mục sản phẩm</h2>
+                <a href="shop.html?category=phone">Điện thoại <span>›</span></a>
+                <a href="shop.html?category=laptop">Laptop <span>›</span></a>
+                <a href="shop.html?category=tablet">Máy tính bảng <span>›</span></a>
+                <a href="shop.html?category=accessory">Phụ kiện <span>›</span></a>
+                <a href="shop.html">Tất cả sản phẩm <span>›</span></a>
+            </aside>
+
+            <div class="hero">
+                <div class="hero-content">
+                    <p class="eyebrow">KYAN TECH SHOP</p>
+                    <h1>Nâng cấp công nghệ,<br>nâng tầm trải nghiệm</h1>
+                    <p>Khám phá điện thoại, laptop và phụ kiện chính hãng với mức giá hấp dẫn.</p>
+                    <a href="shop.html" class="btn">Mua sắm ngay <span aria-hidden="true">→</span></a>
+                    <div class="hero-benefits">
+                        <span>✓ Sản phẩm đa dạng</span>
+                        <span>✓ Hỗ trợ tận tâm</span>
+                    </div>
+                </div>
+                <div class="hero-image-wrap">
+                    <img src="Images/Banner/hero.jpg" alt="Không gian công nghệ với laptop và thiết bị điện tử">
+                    <span class="hero-bubble">TECH<br>2026</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="section home-category-section">
+            <div class="section-heading">
+                <div>
+                    <p class="section-kicker">KHÁM PHÁ</p>
+                    <h2>Danh mục nổi bật</h2>
+                </div>
+                <a class="view-all" href="shop.html">Xem tất cả <span aria-hidden="true">→</span></a>
+            </div>
+            <div class="category-grid">
+                <a class="category-card" href="shop.html?category=phone">
+                    <div class="category-image"><img src="Images/Products/iphone-16.webp" alt="Điện thoại"></div>
+                    <span>Điện thoại</span><small>Khám phá ngay →</small>
+                </a>
+                <a class="category-card" href="shop.html?category=laptop">
+                    <div class="category-image"><img src="Images/Products/macbook-air.webp" alt="Laptop"></div>
+                    <span>Laptop</span><small>Khám phá ngay →</small>
+                </a>
+                <a class="category-card" href="shop.html?category=tablet">
+                    <div class="category-image"><img src="Images/Products/ipad-air.webp" alt="Máy tính bảng"></div>
+                    <span>Máy tính bảng</span><small>Khám phá ngay →</small>
+                </a>
+                <a class="category-card" href="shop.html?category=accessory">
+                    <div class="category-image"><img src="Images/Products/headphones.webp" alt="Phụ kiện"></div>
+                    <span>Phụ kiện</span><small>Khám phá ngay →</small>
+                </a>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section-heading">
+                <div>
+                    <p class="section-kicker">LỰA CHỌN HÀNG ĐẦU</p>
+                    <h2>Sản phẩm nổi bật</h2>
+                </div>
+                <a class="view-all" href="shop.html">Xem tất cả <span aria-hidden="true">→</span></a>
+            </div>
+            <div id="featured-products" class="product-grid"></div>
+        </section>
+
+        <section class="section">
+            <div class="section-heading">
+                <div>
+                    <p class="section-kicker">CẬP NHẬT MỖI NGÀY</p>
+                    <h2>Tin công nghệ mới nhất</h2>
+                </div>
+                <a class="view-all" href="blog.html">Xem tất cả tin tức <span aria-hidden="true">→</span></a>
+            </div>
+            <div id="latest-blogs" class="blog-grid"></div>
+        </section>
+    </main>
+
+    <footer id="site-footer"></footer>
+</body>
+</html>
