@@ -1,12 +1,13 @@
+```html
 <!DOCTYPE html>
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Chi tiết bài viết đánh giá công nghệ tại Kyan Tech Shop.">
-    <title>Chi tiết bài viết | Kyan Tech Shop</title>
+    <title>Đánh giá iPhone 16 Pro Max | KyanTechShop</title>
 
-    <!-- CSS của Ogani và tùy chỉnh -->
+    <!-- CSS dùng chung với index.html -->
     <link rel="stylesheet" href="Styles/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="Styles/elegant-icons.css">
@@ -14,141 +15,381 @@
     <link rel="stylesheet" href="Styles/kyan-ogani.css">
 
     <style>
-        .blog-details-hero {
+        .blog-details-main {
+            padding: 35px 0 60px;
+        }
+
+        .blog-details-banner {
             background: linear-gradient(120deg, #1976d2, #0d47a1);
-            padding: 45px 0;
             color: #fff;
             text-align: center;
-            margin-bottom: 40px;
+            padding: 45px 20px;
+            border-radius: 10px;
+            margin-bottom: 35px;
         }
-        .blog-details-hero h1 {
+
+        .blog-details-banner h1 {
+            max-width: 850px;
+            margin: 0 auto 18px;
             font-size: 32px;
+            line-height: 1.4;
             font-weight: 800;
-            margin-bottom: 15px;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
         }
-        .blog__details__text img {
-            width: 100%;
-            border-radius: 6px;
-            margin: 20px 0;
-            max-height: 400px;
-            object-fit: cover;
+
+        .blog-details-banner a {
+            color: #fff;
+            text-decoration: none;
         }
-        .blog__details__text p {
-            color: #555;
-            font-size: 16px;
-            line-height: 1.8;
+
+        .blog-details-banner a:hover {
+            text-decoration: underline;
+        }
+
+        .blog-details-layout {
+            display: grid;
+            grid-template-columns: minmax(0, 800px) minmax(220px, 1fr);
+            gap: 35px;
+            align-items: start;
+        }
+
+        .blog-article {
+            background: #fff;
+            padding: 28px;
+            border: 1px solid #eee;
+            border-radius: 10px;
+            min-width: 0;
+        }
+
+        .blog-article-meta {
+            color: #888;
+            font-size: 14px;
             margin-bottom: 20px;
         }
-        .blog__details__text h3 {
-            color: #1c1c1c;
+
+        .blog-article-meta i {
+            margin-right: 6px;
+            color: #1976d2;
+        }
+
+        .blog-article p {
+            color: #555;
+            font-size: 16px;
+            line-height: 1.9;
+            margin-bottom: 20px;
+        }
+
+        .blog-article h2 {
+            color: #222;
+            font-size: 25px;
             font-weight: 700;
-            margin-top: 30px;
-            margin-bottom: 15px;
+            margin: 30px 0 15px;
+        }
+
+        .blog-article h3 {
+            color: #222;
+            font-size: 21px;
+            font-weight: 700;
+            margin: 28px 0 14px;
+        }
+
+        .blog-article .article-image {
+            display: block;
+            width: 100%;
+            max-height: 450px;
+            object-fit: contain;
+            background: #f8f8f8;
+            border-radius: 8px;
+            margin: 25px auto;
+        }
+
+        .blog-article .article-summary {
+            background: #f3f8ff;
+            border-left: 4px solid #1976d2;
+            padding: 18px 20px;
+            border-radius: 5px;
+            margin: 25px 0;
+        }
+
+        .blog-article .article-summary p {
+            margin: 0;
+        }
+
+        .blog-sidebar {
+            background: #f8f9fa;
+            padding: 24px;
+            border-radius: 10px;
+        }
+
+        .blog-sidebar h3 {
+            font-size: 20px;
+            font-weight: 700;
+            margin: 0 0 18px;
+        }
+
+        .blog-sidebar a {
+            display: block;
+            color: #444;
+            text-decoration: none;
+            padding: 12px 0;
+            border-bottom: 1px solid #e5e5e5;
+            line-height: 1.6;
+        }
+
+        .blog-sidebar a:hover {
+            color: #1976d2;
+        }
+
+        .blog-back-link {
+            display: inline-block;
+            margin-top: 25px;
+            color: #1976d2;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .blog-back-link:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .blog-details-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .blog-details-banner {
+                padding: 32px 16px;
+            }
+
+            .blog-details-banner h1 {
+                font-size: 25px;
+            }
+
+            .blog-article {
+                padding: 20px;
+            }
+
+            .blog-article h2 {
+                font-size: 22px;
+            }
+
+            .blog-sidebar {
+                margin-top: 5px;
+            }
         }
     </style>
 </head>
+
 <body>
 
-    <!-- Header chuẩn Ogani -->
-    <header class="header">
-        <div class="header__top">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6 col-md-6">
-                        <div class="header__top__left">
-                            <ul>
-                                <li><i class="fa fa-envelope"></i> kyantechshop@gmail.com</li>
-                                <li>Miễn phí giao hàng cho đơn từ 5 triệu đồng</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6">
-                        <div class="header__top__right">
-                            <div class="header__top__right__auth">
-                                <a href="contact.html"><i class="fa fa-phone"></i> Liên hệ</a>
-                                <a href="login.html"><i class="fa fa-user"></i> Đăng nhập</a>
-                                <a href="register.html"><i class="fa fa-user-plus"></i> Đăng ký</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <!-- Thanh thông báo giống index.html -->
+    <div class="topbar">
+        <div class="container topbar-inner">
+            <p>Miễn phí giao hàng cho đơn hàng từ 5 triệu đồng!</p>
+
+            <div class="topbar-links">
+                <a href="contact.html">Liên hệ</a>
+                <a href="login.html">Đăng nhập</a>
             </div>
         </div>
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-3 col-md-3">
-                    <div class="header__logo">
-                        <a href="index.html"><img src="Images/logo.png" alt="KyanTechShop"></a>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-6">
-                    <nav class="header__menu">
-                        <ul>
-                            <li><a href="index.html">Trang chủ</a></li>
-                            <li><a href="shop.html">Cửa hàng</a></li>
-                            <li><a href="shop.html?category=phone">Điện thoại</a></li>
-                            <li><a href="shop.html?category=laptop">Laptop</a></li>
-                            <li><a href="shop.html?category=tablet">Máy tính bảng</a></li>
-                            <li><a href="shop.html?category=accessory">Phụ kiện</a></li>
-                            <li class="active"><a href="blog.html">Tin công nghệ</a></li>
-                            <li><a href="contact.html">Liên hệ</a></li>
-                        </ul>
-                    </nav>
-                </div>
-                <div class="col-lg-3 col-md-3">
-                    <div class="header__cart" style="text-align: right;">
-                        <ul>
-                            <li><a href="shoping-cart.html"><i class="fa fa-shopping-bag"></i> <span class="cart-count">0</span></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
+    </div>
+
+    <!-- Header dùng chung -->
+    <header class="header container">
+        <a class="logo" href="index.html">
+            Kyan<span>Tech</span><span>Shop</span>
+        </a>
+
+        <form id="search-form" class="search-form">
+            <input
+                id="search-input"
+                type="search"
+                placeholder="Tìm điện thoại, laptop bạn cần..."
+                aria-label="Tìm sản phẩm"
+            >
+            <button type="submit">Tìm kiếm</button>
+        </form>
+
+        <a href="shoping-cart.html" class="cart-link">
+            Giỏ hàng (<span class="cart-count">0</span>)
+        </a>
     </header>
 
-    <main>
-        <section class="blog-details-hero">
-            <div class="container">
+    <!-- Thanh điều hướng giống index.html -->
+    <nav class="navbar">
+        <div class="container nav-inner">
+            <a href="index.html">Trang chủ</a>
+            <a href="shop.html">Cửa hàng</a>
+            <a href="shop.html?category=phone">Điện thoại</a>
+            <a href="shop.html?category=laptop">Laptop</a>
+            <a href="shop.html?category=tablet">Máy tính bảng</a>
+            <a href="shop.html?category=accessory">Phụ kiện</a>
+            <a class="active" href="blog.html">Tin công nghệ</a>
+            <a href="contact.html">Liên hệ</a>
+        </div>
+    </nav>
+
+    <main class="blog-details-main">
+        <div class="container">
+
+            <!-- Tiêu đề bài viết -->
+            <section class="blog-details-banner">
                 <h1>Đánh giá chi tiết iPhone 16 Pro Max: Đỉnh cao công nghệ di động</h1>
-                <div>
+
+                <div class="blog-breadcrumb">
                     <a href="index.html">Trang chủ</a>
-                    <span>/</span>
+                    <span> / </span>
                     <a href="blog.html">Tin công nghệ</a>
-                    <span>/</span>
-                    <strong>Chi tiết</strong>
+                    <span> / </span>
+                    <strong>Chi tiết bài viết</strong>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <section class="blog-details spad">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-8">
-                        <div class="blog__details__text">
-                            <p>Sự xuất hiện của dòng sản phẩm mới luôn thu hút sự quan tâm lớn từ cộng đồng công nghệ. Năm nay, hãng tiếp tục mang đến những cải tiến mạnh mẽ không chỉ về thiết kế bên ngoài mà còn ở sức mạnh phần cứng bên trong.</p>
-                            
-                            <img src="Images/Products/iphone-16.webp" alt="iPhone 16 Pro Max">
+            <div class="blog-details-layout">
 
-                            <h3>Thiết kế đẳng cấp và tối ưu trải nghiệm cầm nắm</h3>
-                            <p>Với viền màn hình được tinh chỉnh mỏng hơn đáng kể kết hợp khung viền titan siêu nhẹ, thiết bị mang lại cảm giác cầm nắm cực kỳ chắc chắn nhưng không kém phần sang trọng. Kích thước màn hình lớn giúp không gian hiển thị rộng rãi, tối ưu cho cả công việc lẫn giải trí.</p>
+                <!-- Nội dung bài viết -->
+                <article class="blog-article">
 
-                            <h3>Hiệu năng vượt trội từ chip xử lý thế hệ mới</h3>
-                            <p>Được trang bị bộ vi xử lý tối tân, thiết bị dễ dàng xử lý mượt mà mọi tựa game đồ họa nặng hay các tác vụ chỉnh sửa video 4K chuyên nghiệp. Thời lượng pin cũng đã được cải thiện rõ rệt, cho phép người dùng thoải mái sử dụng suốt cả ngày dài.</p>
-
-                            <p><b>Tổng kết:</b> Đây chắc chắn là sự lựa chọn hoàn hảo dành cho những ai đang tìm kiếm một thiết bị di động toàn diện cả về thiết kế, hiệu năng và camera.</p>
-                        </div>
+                    <div class="blog-article-meta">
+                        <span><i class="fa fa-folder-open"></i> Đánh giá sản phẩm</span>
+                        <span> &nbsp; | &nbsp; </span>
+                        <span><i class="fa fa-laptop"></i> Công nghệ</span>
                     </div>
-                </div>
+
+                    <p>
+                        Sự xuất hiện của dòng sản phẩm mới luôn thu hút sự quan tâm
+                        lớn từ cộng đồng công nghệ. iPhone 16 Pro Max mang đến những
+                        cải tiến về thiết kế, hiệu năng và khả năng chụp ảnh, hướng
+                        đến người dùng cần một thiết bị phục vụ cả công việc lẫn giải trí.
+                    </p>
+
+                    <img
+                        class="article-image"
+                        src="Images/Products/iphone-16.webp"
+                        alt="Điện thoại iPhone 16 Pro Max"
+                    >
+
+                    <h2>1. Thiết kế đẳng cấp và tối ưu trải nghiệm cầm nắm</h2>
+
+                    <p>
+                        Thiết bị sở hữu thiết kế cao cấp với khung viền titan,
+                        các góc được hoàn thiện tinh tế và màn hình lớn. Không gian
+                        hiển thị rộng rãi giúp việc xem phim, đọc tin tức và xử lý
+                        công việc trở nên thuận tiện hơn.
+                    </p>
+
+                    <p>
+                        Kiểu dáng hiện đại cũng giúp sản phẩm phù hợp với người dùng
+                        yêu thích sự sang trọng. Tuy nhiên, kích thước lớn có thể
+                        khiến việc sử dụng bằng một tay chưa thật sự thuận tiện
+                        đối với một số người.
+                    </p>
+
+                    <h2>2. Hiệu năng từ chip xử lý thế hệ mới</h2>
+
+                    <p>
+                        Với bộ xử lý thuộc dòng Pro, iPhone 16 Pro Max hướng đến
+                        khả năng xử lý các tác vụ nặng như chơi game, chỉnh sửa
+                        video và sử dụng nhiều ứng dụng. Hiệu năng thực tế còn
+                        phụ thuộc vào ứng dụng, thiết lập và điều kiện sử dụng.
+                    </p>
+
+                    <p>
+                        Đối với người thường xuyên làm việc trên điện thoại hoặc
+                        chơi các trò chơi có đồ họa cao, hiệu năng là một trong
+                        những yếu tố đáng cân nhắc khi lựa chọn thiết bị.
+                    </p>
+
+                    <h2>3. Khả năng chụp ảnh và quay video</h2>
+
+                    <p>
+                        Hệ thống camera là điểm đáng chú ý của dòng iPhone Pro.
+                        Người dùng có thể tận dụng nhiều tiêu cự và chế độ chụp
+                        để ghi lại cảnh vật, chân dung hoặc những khoảnh khắc
+                        trong cuộc sống hằng ngày.
+                    </p>
+
+                    <p>
+                        Khi lựa chọn điện thoại để chụp ảnh, bạn nên cân nhắc
+                        thêm nhu cầu quay video, chụp trong điều kiện thiếu sáng
+                        và dung lượng lưu trữ cần thiết.
+                    </p>
+
+                    <h2>4. Có nên lựa chọn iPhone 16 Pro Max?</h2>
+
+                    <p>
+                        Sản phẩm phù hợp với người dùng ưu tiên màn hình lớn,
+                        hiệu năng mạnh và hệ thống camera đa dụng. Nếu bạn chủ yếu
+                        sử dụng điện thoại cho các tác vụ cơ bản, nên so sánh thêm
+                        với những mẫu máy có mức giá thấp hơn để chọn được thiết bị
+                        phù hợp ngân sách.
+                    </p>
+
+                    <div class="article-summary">
+                        <p>
+                            <strong>Tổng kết:</strong> iPhone 16 Pro Max là lựa chọn
+                            đáng cân nhắc cho người dùng cần một chiếc điện thoại
+                            cao cấp phục vụ công việc, giải trí và sáng tạo nội dung.
+                            Hãy so sánh giá bán, dung lượng lưu trữ và nhu cầu thực tế
+                            trước khi quyết định mua.
+                        </p>
+                    </div>
+
+                    <a href="blog.html" class="blog-back-link">
+                        <i class="fa fa-arrow-left"></i> Quay lại Tin công nghệ
+                    </a>
+
+                </article>
+
+                <!-- Bài viết liên quan -->
+                <aside class="blog-sidebar">
+                    <h3>Bài viết liên quan</h3>
+
+                    <a href="blog.html">
+                        <i class="fa fa-angle-right"></i>
+                        Tin công nghệ mới nhất
+                    </a>
+
+                    <a href="blog.html">
+                        <i class="fa fa-angle-right"></i>
+                        Kinh nghiệm chọn mua laptop
+                    </a>
+
+                    <a href="blog.html">
+                        <i class="fa fa-angle-right"></i>
+                        Những phụ kiện công nghệ nên có
+                    </a>
+
+                    <a href="shop.html?category=phone">
+                        <i class="fa fa-angle-right"></i>
+                        Khám phá các mẫu điện thoại
+                    </a>
+
+                    <a href="shop.html?category=laptop">
+                        <i class="fa fa-angle-right"></i>
+                        Khám phá các mẫu laptop
+                    </a>
+                </aside>
+
             </div>
-        </section>
+        </div>
     </main>
 
-    <!-- JavaScript -->
+    <!-- Footer được common.js tạo giống các trang khác -->
+    <footer id="site-footer"></footer>
+
+    <!-- JavaScript dùng chung -->
     <script src="Scripts/jquery-3.3.1.min.js"></script>
     <script src="Scripts/bootstrap.min.js"></script>
+    <script src="Scripts/jquery.nice-select.min.js"></script>
+    <script src="Scripts/jquery.slicknav.js"></script>
+    <script src="Scripts/owl.carousel.min.js"></script>
+    <script src="Scripts/mixitup.min.js"></script>
     <script src="Scripts/main.js"></script>
+
+    <script src="Scripts/products.js"></script>
+    <script src="Scripts/common.js"></script>
+    <script src="Scripts/kyan-animations.js"></script>
+
 </body>
 </html>
+```
